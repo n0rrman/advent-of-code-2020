@@ -4,28 +4,32 @@ import (
 	"fmt"
 	"log"
 	"os"
+	"strconv"
 	"strings"
 )
 
-func readData(file string) []string {
+func readData(file string) []int {
 	body, err := os.ReadFile(file)
 	if err != nil {
 		log.Fatalf("unable to read file: %v", err)
 	}
 	sData := strings.Split(string(body[:]), "\n")
+	data := make([]int, len(sData))
+	for i, val := range sData {
+		data[i], _ = strconv.Atoi(val)
+	}
 
-	return sData
+	return data
 }
 
 func main() {
 	data := readData("data")
-	_ = data
 
 	// Part One
-	results := "part one"
+	results := findReportVal(data)
 	fmt.Println("Part one: ", results)
 
 	// Part Two
-	results = "part two"
+	results = 2
 	fmt.Println("Part two: ", results)
 }

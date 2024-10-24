@@ -5,9 +5,10 @@ import (
 )
 
 func TestA(t *testing.T) {
-	results := 0
+	data := readData("test_data")
+	results := findReportVal(data)
 
-	const e = 1
+	const e = 514579
 	if results != e {
 		t.Errorf("Expected %v, but got %v", e, results)
 	}
