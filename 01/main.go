@@ -30,6 +30,6 @@ func main() {
 	fmt.Println("Part one: ", results)
 
 	// Part Two
-	results = 2
+	results = findSecondReportVal(data)
 	fmt.Println("Part two: ", results)
 }
