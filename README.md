@@ -10,6 +10,7 @@ This repository serves as a mono repository for the [Advent of Code 2020](https:
 | Task Number | Completed | Part One | Part Two | Repository |
 |-------------|-----------|-|--|--------|
 | [01](https://adventofcode.com/2020/day/1) | ✅ | 805731 | 192684960 | [advent-of-code-2020/1](https://github.com/n0rrman/advent-of-code-2020/tree/main/01) |
+| [02](https://adventofcode.com/2020/day/2) | ❌ |  |  | [advent-of-code-2020/2](https://github.com/n0rrman/advent-of-code-2020/tree/main/02) |
 
 &nbsp;
 
