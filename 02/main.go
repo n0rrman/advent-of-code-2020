@@ -4,17 +4,37 @@ import (
 	"fmt"
 	"log"
 	"os"
+	"strconv"
 	"strings"
 )
 
-func readData(file string) []string {
+type pwTest struct {
+	min  int
+	max  int
+	char string
+	pw   string
+}
+
+func readData(file string) []pwTest {
 	body, err := os.ReadFile(file)
 	if err != nil {
 		log.Fatalf("unable to read file: %v", err)
 	}
 	sData := strings.Split(string(body[:]), "\n")
 
-	return sData
+	tests := make([]pwTest, len(sData))
+	for i, test := range sData {
+		parts := strings.Split(test, " ")
+
+		tests[i].char = strings.Replace(parts[1], ":", "", 1)
+		tests[i].pw = parts[2]
+
+		minMax := strings.Split(parts[0], "-")
+		tests[i].min, _ = strconv.Atoi(minMax[0])
+		tests[i].max, _ = strconv.Atoi(minMax[1])
+	}
+
+	return tests
 }
 
 func main() {
