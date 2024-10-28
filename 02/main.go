@@ -39,13 +39,12 @@ func readData(file string) []pwTest {
 
 func main() {
 	data := readData("data")
-	_ = data
 
 	// Part One
-	results := "part one"
+	results := validPws(data)
 	fmt.Println("Part one: ", results)
 
 	// Part Two
-	results = "part two"
+	results = 2
 	fmt.Println("Part two: ", results)
 }
