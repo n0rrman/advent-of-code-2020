@@ -5,7 +5,8 @@ import (
 )
 
 func TestA(t *testing.T) {
-	results := 0
+	data := readData("test_data")
+	results := countThreeOneTraversal(data)
 
 	const e = 7
 	if results != e {

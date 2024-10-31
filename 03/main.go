@@ -30,11 +30,9 @@ func readData(file string) grid {
 
 func main() {
 	data := readData("data")
-	fmt.Println(data)
-	_ = data
 
 	// Part One
-	results := 1
+	results := countThreeOneTraversal(data)
 	fmt.Println("Part one: ", results)
 
 	// Part Two
