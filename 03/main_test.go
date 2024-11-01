@@ -15,9 +15,10 @@ func TestA(t *testing.T) {
 }
 
 func TestB(t *testing.T) {
-	results := 0
+	data := readData("test_data")
+	results := mulTraversals(data)
 
-	const e = 2
+	const e = 336
 	if results != e {
 		t.Errorf("Expected %v, but got %v", e, results)
 	}

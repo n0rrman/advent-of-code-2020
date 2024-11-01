@@ -36,6 +36,6 @@ func main() {
 	fmt.Println("Part one: ", results)
 
 	// Part Two
-	results = 2
+	results = mulTraversals(data)
 	fmt.Println("Part two: ", results)
 }
