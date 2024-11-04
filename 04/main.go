@@ -56,15 +56,13 @@ func readData(file string) []passportData {
 }
 
 func main() {
-	data := readData("test_data")
-	fmt.Println(data)
-	_ = data
+	data := readData("data")
 
 	// Part One
-	results := "part one"
+	results := countValidIds(data)
 	fmt.Println("Part one: ", results)
 
 	// Part Two
-	results = "part two"
+	results = 2
 	fmt.Println("Part two: ", results)
 }

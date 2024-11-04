@@ -6,8 +6,7 @@ import (
 
 func TestA(t *testing.T) {
 	data := readData("test_data")
-	_ = data
-	results := 0
+	results := countValidIds(data)
 
 	const e = 2
 	if results != e {
