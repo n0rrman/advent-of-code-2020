@@ -7,19 +7,18 @@ import (
 	"strings"
 )
 
-func readData(file string) [][]bool {
+func readData(file string) [][]string {
 	body, err := os.ReadFile(file)
 	if err != nil {
 		log.Fatalf("unable to read file: %v", err)
 	}
 	sData := strings.Split(string(body[:]), "\n")
-	dirArray := make([][]bool, len(sData))
+	dirArray := make([][]string, len(sData))
 
 	for y, row := range sData {
-		dirArray[y] = make([]bool, len(row))
+		dirArray[y] = make([]string, len(row))
 		for x, val := range strings.Split(row, "") {
-			boolVal := val == "F" || val == "R"
-			dirArray[y][x] = boolVal
+			dirArray[y][x] = val
 		}
 	}
 
@@ -28,13 +27,12 @@ func readData(file string) [][]bool {
 
 func main() {
 	data := readData("data")
-	_ = data
 
 	// Part One
-	results := "part one"
+	results := findHighestSeatID(data, 128, 8)
 	fmt.Println("Part one: ", results)
 
 	// Part Two
-	results = "part two"
+	results = 2
 	fmt.Println("Part two: ", results)
 }
