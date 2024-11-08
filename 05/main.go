@@ -33,6 +33,6 @@ func main() {
 	fmt.Println("Part one: ", results)
 
 	// Part Two
-	results = 2
+	results = findSeatID(data, 128, 8)
 	fmt.Println("Part two: ", results)
 }
