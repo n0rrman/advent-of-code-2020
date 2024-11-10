@@ -9,7 +9,7 @@ func TestA(t *testing.T) {
 	_ = data
 	results := 0
 
-	const e = 1
+	const e = 11
 	if results != e {
 		t.Errorf("Expected %v, but got %v", e, results)
 	}
