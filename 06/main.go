@@ -30,22 +30,17 @@ func readData(file string) []group {
 			}
 		}
 	}
-
-	fmt.Println(groups)
 	return groups
 }
 
 func main() {
 	data := readData("data")
 
-	fmt.Println(data)
-	_ = data
-
 	// Part One
-	results := "part one"
+	results := sumUniqueVotes(data)
 	fmt.Println("Part one: ", results)
 
 	// Part Two
-	results = "part two"
+	results = 2
 	fmt.Println("Part two: ", results)
 }

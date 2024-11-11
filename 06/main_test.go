@@ -6,8 +6,7 @@ import (
 
 func TestA(t *testing.T) {
 	data := readData("test_data")
-	_ = data
-	results := 0
+	results := sumUniqueVotes(data)
 
 	const e = 11
 	if results != e {
