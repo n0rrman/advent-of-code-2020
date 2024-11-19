@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"log"
 	"os"
+	"strconv"
 	"strings"
 )
 
@@ -20,17 +21,30 @@ func readData(file string) []instruction {
 	}
 	sData := strings.Split(string(body[:]), "\n")
 
-	return sData
+	program := make([]instruction, len(sData))
+	for iter, p := range sData {
+		split := strings.Split(p, " ")
+		t := split[0]
+		v, _ := strconv.Atoi(split[1])
+		i := instruction{
+			InstrType: t,
+			Value:     v,
+			Executed:  false,
+		}
+		program[iter] = i
+	}
+
+	return program
 }
 
 func main() {
-	data := readData("data")
+	program := readData("data")
 
 	// Part One
-	results := a(data)
+	results := executeProgram(program)
 	fmt.Println("Part one: ", results)
 
 	// Part Two
-	results = b(data)
+	results = b(program)
 	fmt.Println("Part two: ", results)
 }

@@ -5,8 +5,8 @@ import (
 )
 
 func TestA(t *testing.T) {
-	data := readData("test_data")
-	results := a(data)
+	program := readData("test_data")
+	results := executeProgram(program)
 
 	const e = 5
 	if results != e {
