@@ -16,9 +16,9 @@ func TestA(t *testing.T) {
 
 func TestB(t *testing.T) {
 	data := readData("test_data")
-	results := b(data)
+	results := executeModifiedPrograms(data)
 
-	const e = 2
+	const e = 8
 	if results != e {
 		t.Errorf("Expected %v, but got %v", e, results)
 	}

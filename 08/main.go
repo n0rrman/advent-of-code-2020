@@ -45,6 +45,6 @@ func main() {
 	fmt.Println("Part one: ", results)
 
 	// Part Two
-	results = b(program)
+	results = executeModifiedPrograms(program)
 	fmt.Println("Part two: ", results)
 }

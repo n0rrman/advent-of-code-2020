@@ -16,6 +16,8 @@ This repository serves as a mono repository for the [Advent of Code 2020](https:
 | [05](https://adventofcode.com/2020/day/5) | ✅ | 988 | 696 | [advent-of-code-2020/5](https://github.com/n0rrman/advent-of-code-2020/tree/main/05) |
 | [06](https://adventofcode.com/2020/day/6) | ✅ | 6437 | 3229 | [advent-of-code-2020/6](https://github.com/n0rrman/advent-of-code-2020/tree/main/06) |
 | [07](https://adventofcode.com/2020/day/7) | ✅ | 370 | 29547 | [advent-of-code-2020/7](https://github.com/n0rrman/advent-of-code-2020/tree/main/07) |
+| [08](https://adventofcode.com/2020/day/8) | ✅ | 1384 | 761 | [advent-of-code-2020/8](https://github.com/n0rrman/advent-of-code-2020/tree/main/08) |
+| [09](https://adventofcode.com/2020/day/9) | ❌ |  |  | [advent-of-code-2020/9](https://github.com/n0rrman/advent-of-code-2020/tree/main/09) |
 
 &nbsp;
 
