@@ -6,7 +6,7 @@ import (
 
 func TestA(t *testing.T) {
 	data := readData("test_data")
-	results := a(data)
+	results := findFirstXMASFailure(data, 5)
 
 	const e = 127
 	if results != e {

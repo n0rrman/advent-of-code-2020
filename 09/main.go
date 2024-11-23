@@ -27,7 +27,7 @@ func main() {
 	data := readData("data")
 
 	// Part One
-	results := a(data)
+	results := findFirstXMASFailure(data, 25)
 	fmt.Println("Part one: ", results)
 
 	// Part Two
