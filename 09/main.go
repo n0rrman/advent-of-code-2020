@@ -31,6 +31,6 @@ func main() {
 	fmt.Println("Part one: ", results)
 
 	// Part Two
-	results = b(data)
+	results = findEncryptionWeakness(data, 25)
 	fmt.Println("Part two: ", results)
 }
