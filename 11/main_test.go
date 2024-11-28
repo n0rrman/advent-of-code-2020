@@ -1,12 +1,14 @@
 package main
 
 import (
+	"fmt"
 	"testing"
 )
 
 func TestA(t *testing.T) {
 	data := readData("test_data")
-	results := a(data)
+	fmt.Println(data)
+	results := calcOccupied(data)
 
 	const e = 37
 	if results != e {

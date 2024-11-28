@@ -1,5 +1,6 @@
 package main
 
-func a(_ any) int {
+func calcOccupied(seats [][]int) int {
+
 	return 1
 }
